@@ -101,6 +101,10 @@ endpoint Data
 ```sh
 method: GET
 url: https://apijdsnode.herokuapp.com/api/fetch/data
+header: 
+{
+    Authorization: Bearer {Token}
+}
 result:
 {
     "status": 200,
