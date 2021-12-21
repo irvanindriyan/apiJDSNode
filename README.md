@@ -19,7 +19,7 @@ JWT_KEY=jabarmaju
 
 Install package
 ```sh
-$ npm install --save npx express sequelize sequelize-cli mysql2 password-hash jsonwebtoken express-validator cors helmet dotenv nodemon node-fetch@2.0
+$ npm install --save npx express sequelize sequelize-cli mysql2 password-hash jsonwebtoken jwt-decode express-validator cors helmet dotenv nodemon node-fetch@2.0
 ```
 
 Run Migration

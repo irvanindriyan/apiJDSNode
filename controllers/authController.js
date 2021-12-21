@@ -2,6 +2,7 @@ const db = require("../database/models")
 const Users = db.Users
 const Blacklist = db.Blacklist
 const jwt = require('jsonwebtoken')
+const jwt_decode = require('jwt-decode');
 const passwordHash = require('password-hash')
 require("dotenv").config()
 
@@ -72,15 +73,7 @@ const login = async (req, res) => {
 const getUser = async (req, res) => {
     try {
         const token = req.headers.authorization;
-        const base64Url = token.split('.')[1];
-        const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-        const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
-            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-        }).join(''));
-
-        dataJwt = JSON.parse(jsonPayload);
-
-        console.log(dataJwt);
+        const dataJwt = jwt_decode(token);
 
         const id = dataJwt.userToken.id
         const data = await Users.findByPk(id)
