@@ -4,12 +4,6 @@ const auth = require('./authRoutes');
 const fetchData = require('./fetchRoutes');
 const router = express();
 
-router.get(`/`, (_req, res) => {
-  res.json({
-    "message": "Welcome to Rest Api"
-  });
-});
-
 router.get(`/api/`, (_req, res) => {
   res.json({
     "message": "Welcome to Rest Api"
