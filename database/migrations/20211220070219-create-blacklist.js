@@ -11,11 +11,11 @@ module.exports = {
       token: {
         type: Sequelize.STRING
       },
-      created_at: {
+      createdAt: {
         type: Sequelize.DATE,
         allowNull: false
       },
-      updated_at: {
+      updatedAt: {
         type: Sequelize.DATE,
         allowNull: false
       }
