@@ -5,7 +5,7 @@ const { verifyToken } = require('../middleware/verifyJwt')
 const { verifyRole } = require('../middleware/verifyRole')
 const router = express.Router()
 
-router.get(`/api/fetch/data`, fetchData.getData)
+router.get(`/api/fetch/data`, verifyToken, fetchData.getData)
 router.get(`/api/fetch/data_order`, [verifyToken, verifyRole], fetchData.getDataOrder)
 
 module.exports = router

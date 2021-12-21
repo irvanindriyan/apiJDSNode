@@ -1,20 +1,13 @@
 # instalasi
 
-Create Database Mysql
-```sql
-CREATE DATABASE `db_jabar_node`
-```
-
 Configurasi database config in `.env`
 ```sh
-TIME_ZONE=Asia/Jakarta
-APP_PORT=3000
-ENV=development
-DB_USER=root
-DB_PASS=
-DB_NAME=db_jabar_node
-DB_HOST=127.0.0.1
-JWT_KEY=jabarmaju
+DB_CONNECTION=mysql
+DB_HOST={host}
+DB_PORT={port}
+DB_DATABASE={database}
+DB_USERNAME={user}
+DB_PASSWORD={password}
 ```
 
 Install package
@@ -43,7 +36,7 @@ result:
 {
     "status": 200,
     "data": {
-        "msg": "Registrasi sucessfully !",
+        "message": "Registrasi sucessfully !",
         "token": "{jwt token}"
     }
 }
@@ -62,7 +55,7 @@ result:
 {
     "status": 200,
     "data": {
-        "msg": "Login sucessfully !",
+        "message": "Login sucessfully !",
         "token": "jwt token"
     }
 }
