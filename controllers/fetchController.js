@@ -42,8 +42,7 @@ function getCurrency(callbackCurrency) {
 	const requestOptions = {
 		method: 'GET'
 	};
-	// const apiKey = 'd1ded944220ca6b0c442';
-	const apiKey = '9d1482decb27369c687c';
+	const apiKey = 'd1ded944220ca6b0c442';
 
 	fetch("https://free.currencyconverterapi.com/api/v5/convert?q=USD_IDR&compact=ultra&apiKey="+apiKey,
 	requestOptions).then(response => 
