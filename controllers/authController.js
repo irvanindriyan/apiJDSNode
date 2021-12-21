@@ -80,6 +80,8 @@ const getUser = async (req, res) => {
 
         dataJwt = JSON.parse(jsonPayload);
 
+        console.log(dataJwt);
+
         const id = dataJwt.userToken.id
         const data = await Users.findByPk(id)
         const fetchResult = data ? data : `${id} not found in db`
