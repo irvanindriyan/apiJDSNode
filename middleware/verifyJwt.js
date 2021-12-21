@@ -17,16 +17,16 @@ const verifyToken = async (req, res, next) => {
         //     }
         // }
         
-        jwt.verify(token, process.env.JWT_KEY, (error) => {
-            if (error) {
-                return res.send({ 
-                    status: 500, 
-                    data: error 
-                }).status(500)
-            }
+        // jwt.verify(token, process.env.JWT_KEY, (error) => {
+        //     if (error) {
+        //         return res.send({ 
+        //             status: 500, 
+        //             data: error 
+        //         }).status(500)
+        //     }
 
-            next()
-        })
+        //     next()
+        // })
     } else {
         res.send({
             status: 401,
